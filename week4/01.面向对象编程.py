@@ -4,11 +4,17 @@
 """
 
 
-class Student:
+class Student(object):
     # __init__ 方法用于在创建对象时进行初始化操作
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
+"""
+    self 是类函数中的必传参数，且必须放在第一个参数位置
+    self 是一个对象，它代表实例化的变量本身
+"""
+
 
     def study(self, course_name):
         print(f'{self.name} 正在学习 {course_name}')
