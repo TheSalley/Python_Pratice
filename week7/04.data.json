@@ -1,0 +1,8 @@
+{
+  "name": "alan",
+  "age": 24,
+  "friend": [
+    "jack",
+    "mark"
+  ]
+}
