@@ -1,4 +1,12 @@
-# 求阶乘
+# coding:utf-8
+
+"""
+    函数：
+
+"""
+
+
+# 求阶乘的函数
 def fac(num):
     result = 1
     for n in range(1, num + 1):
@@ -8,10 +16,11 @@ def fac(num):
 
 print(fac(3))
 
+print('*****')
+
 
 # 参数名前的* 表示args 是一个可变参数
 def add(*args):
-    print(*args)
     total = 0
     for val in args:
         total += val

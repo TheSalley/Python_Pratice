@@ -1,65 +1,65 @@
 # coding:utf-8
 
 """
-    整数、浮点数、字符串、布尔值、
+    数字、
+    布尔值、
+    None、
+    字符串、
+    元组、
+    列表、
+    集合、
+    字典、
 """
 
-# 整型
+# 数字：整数、浮点数、复数
 
-a = 321
-b = 12
+apple_num = 12
+price = 1.2
+complex_num = 1 + 3j
 
-print(a + b)  # 333
-print(a - b)  # 309
-print(a * b)  # 3825
-print(a / b)  # 26.75
+# 布尔型：True、False
 
-# 浮点型
+is_male = True
 
-# 字符串类型
 
-# 布尔型
+# None： 表示此数据类型不存在、未知或为空
 
-# 复数型
+def fun():
+    pass
 
-"""
-    type() 检查数据类型
-"""
 
-a1 = 100
-b1 = 12.345
-c1 = 1 + 5j
-d1 = 'hello, world'
-e1 = True
+print(fun())  # None
 
-print(type(a1))  # <class 'int'>
-print(type(b1))  # <class 'float'>
-print(type(c1))  # <class 'complex'>
-print(type(d1))  # <class 'str'>
-print(type(e1))  # <class 'bool'>
+# 字符串
 
-"""
-    Python 内置的函数对数据的类型进行转换：
-    
-    int(): 将一个数值或字符串转为整数
-    float(): 将一个字符串转为浮点型
-    str(): 转为字符串类型
-    chr(): 将证书转换为该编码对应的字符串(一个字符)
-    ord(): 将字符串(一个字符)转为对应的编码
+name = 'alan'
+word = """
+    hello,
+    world!
 """
 
-"""
-    input(): 获取键盘输入(字符串)
-"""
-1
-a2 = int(input('a = '))
-b2 = int(input('b = '))
+# 元组：是不可变序列数据类型；可以包含多种混合数据类型；
 
-print('%d + %d = %d' % (a2, b2, a2 + b2))
-print('%d - %d = %d' % (a2, b2, a2 - b2))
-print('%d * %d = %d' % (a2, b2, a2 * b2))
-print('%d / %d = %f' % (a2, b2, a2 / b2))
-print('%d // %d = %d' % (a2, b2, a2 // b2))  # //: 整除
-print('%d %% %d = %d' % (a2, b2, a2 % b2))
-print('%d ** %d = %d' % (a2, b2, a2 ** b2))  # **: 指数
+fruits = ('orange', 'banner', 'apple')
+mix = (1, 'alan', (0, 1, 2))
 
+# 列表：是可变序列数据类型；
+
+colors = ['red', 'yellow', 'blue']
+
+# 集合：是无重复数据的无序数据集合；支持相交、并集等运算；
+
+set1 = {'a', 'b', 'c', 'c', 'd'}
+set2 = {'a', 'b', 'x', 'y', 'z'}
+
+print(set1)  # {'a', 'b', 'c', 'd'}
+print(set2)  # {'a', 'z', 'y', 'b', 'x'}
+print(set1 & set2)  # {'a', 'b'}
+
+# 字典：一组键值对
+
+words = {
+    'name': 'alan',
+    'age': 22,
+    'hobby': ['read book', 'play games', 'running']
+}
