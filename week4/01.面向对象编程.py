@@ -42,19 +42,19 @@ stu2.watch_movie()  # Jack, Black
 
 
 class Person:
-    def __init__(self, id, name):
-        self.__id = id
+    def __init__(self, ids, name):
+        self.__ids = ids
         self.name = name
 
     def __say1(self):
-        print(f'id: {self.__id}, name: {self.name}')
+        print(f'id: {self.__ids}, name: {self.name}')
 
     def say2(self):
-        print(f'id: {self.__id}, name: {self.name}')
+        print(f'id: {self.__ids}, name: {self.name}')
 
 
 zhang = Person('123456', 'zhang')
 print(zhang.name)  # zhang
-# print(zhang.__id)  # # 'Person' object has no attribute '__id'
-zhang.say2()  # id: 123456, name: zhang
+# print(zhang.__ids)  # # 'Person' object has no attribute '__ids'
+zhang.say2()  # ids: 123456, name: zhang
 # zhang.__say1()  # 'Person' object has no attribute '__say1'

@@ -10,13 +10,44 @@
         多进程、多线程、多进程 + 多线程
 """
 
+from random import randint
+from time import time, sleep
 
-import sys
 
-print("Script name:", sys.argv[0])
-print("Arguments:", end=" ")
+# def download_task(filename):
+#     print(f'开始下载{filename}...')
+#     time_to_download = randint(5, 10)
+#     sleep(time_to_download)
+#     print(f'{filename}下载完成！耗费了{time_to_download}秒')
+#
+#
+# start = time()
+# download_task('Python入门.pdf')
+# download_task('Python高级.pdf')
+# end = time()
+# print(f'一共耗费了{end - start}秒')
 
-for arg in sys.argv[1:]:
-    print(arg, end=" ")
+# 开启多进程
+from multiprocessing import Process,set_start_method
+from os import getpid
 
-print()
+set_start_method('')
+
+def downLoad_task1(filename):
+    print(f'启动下载进程，进程号{getpid()}.')
+    print(f'开始下载{filename}...')
+    time_to_download = randint(5, 10)
+    sleep(time_to_download)
+    print(f'{filename}下载完成！耗费了{time_to_download}秒')
+
+
+start = time()
+p1 = Process(target=downLoad_task1, args=('JavaScript入门.pdf',))
+p1.start()
+p2 = Process(target=downLoad_task1, args=('JavaScript进阶.pdf',))
+# p2.start()
+# p1.join()
+# p2.join()
+# end = time()
+# print(f'一共耗费了{end - start}秒')
+
