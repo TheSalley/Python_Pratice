@@ -13,7 +13,6 @@
 from random import randint
 from time import time, sleep
 
-
 # def download_task(filename):
 #     print(f'开始下载{filename}...')
 #     time_to_download = randint(5, 10)
@@ -28,10 +27,9 @@ from time import time, sleep
 # print(f'一共耗费了{end - start}秒')
 
 # 开启多进程
-from multiprocessing import Process,set_start_method
+from multiprocessing import Process
 from os import getpid
 
-set_start_method('')
 
 def downLoad_task1(filename):
     print(f'启动下载进程，进程号{getpid()}.')
@@ -41,13 +39,13 @@ def downLoad_task1(filename):
     print(f'{filename}下载完成！耗费了{time_to_download}秒')
 
 
-start = time()
-p1 = Process(target=downLoad_task1, args=('JavaScript入门.pdf',))
-p1.start()
-p2 = Process(target=downLoad_task1, args=('JavaScript进阶.pdf',))
-# p2.start()
-# p1.join()
-# p2.join()
-# end = time()
-# print(f'一共耗费了{end - start}秒')
-
+if __name__ == '__main__':
+    start = time()
+    p1 = Process(target=downLoad_task1, args=('JavaScript入门.pdf',))
+    p1.start()
+    p2 = Process(target=downLoad_task1, args=('JavaScript进阶.pdf',))
+    p2.start()
+    p1.join()
+    p2.join()
+    end = time()
+    print(f'一共耗费了{end - start}秒')

@@ -12,6 +12,7 @@ print(len(fruits))  # 4
 
 # 根据索引取值
 
+
 second_fruit = fruits[1]
 print(second_fruit)  # orange
 
