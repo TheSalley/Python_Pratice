@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+
+{% block title %}
+    {% if title %}
+    {{ title | upper}}
+    {% else %}
+    Welcome to Home!
+    {% endif %}
+{% endblock %}
+
+
+
 {% block content %}
     <h1>Hello, {{ user.username }}!</h1>
     {% for post in posts %}
@@ -6,4 +17,14 @@
         <p>{{ post.author.username }} says:<b>{{ post.body }}</b></p>
     </div>
     {% endfor %}
+    <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
 {% endblock %}
