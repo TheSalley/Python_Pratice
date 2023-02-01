@@ -24,4 +24,22 @@ NoSQL 数据库：指的是数据分类存放，但是数据之间没有关联�
             主流的NoSQL 数据库：Redis、MongoDB、MenCache、Neo4J
 """
 
+"""
+cmd 命令连接mysql：mysql -u root -p
+"""
 # mysql 的用户管理
+
+"""
+创建数据库 CREATE DATABASE test;
+修改root密码 ALTER USER 'root'@'localhost' IDENTIFIED BY '123456'; 存到记事本
+            管理员打开cmd mysqld --defaults-file="C:\MySQL Server 8.0\my.ini" --init-file="E:\temp.txt" --console
+停止mysql服务 net stop mysql80
+启动mysql服务 net start mysql80
+"""
+
+"""
+mysql 配置文件:
+    my.ini 文件中，我们可以设置各种mysql 的配置，如字符集、端口号等
+        客户端配置信息：[client]、[mysql]
+        数据库配置信息：[mysqld]
+"""
