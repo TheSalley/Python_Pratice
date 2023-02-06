@@ -103,7 +103,7 @@ SQL 语句的空格和换行是没有限制的；
         DATE 3byte 日期
         TIME 3byte 时间
         YEAR 1byte 年份
-        DATETIME 8byte 日期年份
+        DATETIME 8byte 日期时间
         TIMESTAMP 4byte 时间戳
 """
 
